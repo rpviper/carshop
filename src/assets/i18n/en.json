@@ -1,0 +1,16 @@
+{
+ "home": "Home",
+ "about": "About Us",
+ "products": "Products",
+ "engine": "Engine",
+ "battery": "Battery",
+ "transmission": "Transmission",
+ "axle": "Axle",
+ "contact": "Contact Us",
+ "faq": "FAQ-s",
+ "cart": "Shopping Cart",
+ "welcome": "Welcome to our home page!",
+ "choose-gategory": "Please choose category below, or from Our Products menu",
+ "note": "Note: only engine, battery, transmission and axle work for this example"
+}
+

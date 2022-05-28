@@ -1,23 +1,23 @@
 <ul id="nav">
  <a><img class="img" src="assets/logo.jpg" alt="logo"> </a>
-	<li><a href="/"><h3>Home</h3></a></li>
-	<li><a href="#"><h3>About Us</h3></a></li>
+	<li><a href="/"><h3>{{"home" | translate}} </h3></a></li>
+	<li><a href="/about"><h3>{{"about" | translate}}</h3></a></li>
 	<li>
 	<div class="dropdown">
-  <button class="dropbtn"><h2>Our Products</h2></button>
+  <button class="dropbtn"><h2>{{"products" | translate}}</h2></button>
 		<div class="dropdown-content">
-  <a href="/engine">Engine</a>
-  <a href="/battery">Battery</a>
-  <a href="/transmission">Transmission</a>
-		<a href="/axle">Axle</a>
+  <a href="/engine">{{"engine" | translate}}</a>
+  <a href="/battery">{{"battery" | translate}}</a>
+  <a href="/transmission">{{"transmission" | translate}}</a>
+		<a href="/axle">{{"axle" | translate}}</a>
 	</div>
  </div>
 </li>
 
-	<li><a href="#"><h3>Contact Us</h3></a></li>
-	<li><a href="#"><h3>FAQ-s</h3></a></li>
-	<li><a href="#"><h3>Login</h3></a></li>
+	<li><a href="/contact"><h3>{{"contact" | translate}}</h3></a></li>
+	<li><a href="/faq"><h3>{{"faq" | translate}}</h3></a></li>
+	<li><a href="/cart"><h3>{{"cart" | translate}}</h3></a></li>
 
-	<img class="lang" src="assets/uk.png" alt=""> <!--(click)="useLanguage('en') "-->
-<img class="lang" src="assets/estonia.png" alt=""> <!--(click)="useLanguage('ee') "-->
+	<img class="lang" src="assets/uk.png" alt="" (click)="useLanguage('en') ">
+<img class="lang" src="assets/estonia.png" alt="" (click)="useLanguage('ee') ">
 </ul>
