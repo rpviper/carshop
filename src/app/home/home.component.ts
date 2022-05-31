@@ -12,15 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
-    const language = localStorage.getItem("language");
-    if (language) {
-      this.useLanguage(language);
-    }
+    localStorage.getItem("language");
   }
+} 
 
-useLanguage(language: string): void {
-  this.translate.use(language);
-  localStorage.setItem("language", language);
-}
-
-}

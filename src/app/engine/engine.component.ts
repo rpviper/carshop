@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Engine } from '../models/engine.models';
+import { EngineService } from '../services/engine.service';
 
 @Component({
   selector: 'app-engine',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EngineComponent implements OnInit {
 
-  constructor() { }
+  engines: Engine[] = [];
+
+  constructor(private engineService: EngineService,
+    private translateService: TranslateService
+    ) {}
 
   ngOnInit(): void {
+    this.engineService.getEnginesFromDb().subscribe(response => {
+      for (const key in response) {
+        this.engines.push(response[key]);
+
+      }
+    })
   }
 
 }

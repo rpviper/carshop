@@ -20,6 +20,6 @@ export class NavbarComponent implements OnInit {
 useLanguage(language: string): void {
   this.translate.use(language);
   localStorage.setItem("language", language);
-}
+  }
 
 }

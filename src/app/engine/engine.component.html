@@ -1,1 +1,10 @@
 <button routerLink="/">Back</button>
+
+<div *ngFor="let engine of engines" >
+ <img src="{{engine.imgSrc}}">
+ <div>{{engine.name}} </div>
+ <div>{{engine.price}} </div>
+ <!-- <button (click)="addToCart(engine)">{{"add" | translate}}{{engine.name}}{{"to-cart" | translate}} </button> -->
+</div>
+
+<!-- {{ 'demo.greeting' | translate:{'name':'Andreas'} }} -->
