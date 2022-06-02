@@ -1,0 +1,11 @@
+<form *ngIf="product" [formGroup] = "form"> 
+ <label>Product ID: </label>
+ <input formControlName="name" type="text">
+ <label>Name: </label>
+ <input formControlName="name" type="text">
+ <label>Price: </label>
+ <input formControlName="price" type="number">
+ <label>Description: </label>
+ <input formControlName="description" type="text">
+ <button>Muuda</button>
+</form>

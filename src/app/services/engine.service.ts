@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Engine } from '../models/engine.models';
+import { Product} from '../models/product.model';
 
 
 @Injectable({
@@ -12,14 +12,14 @@ export class EngineService {
   constructor(private http: HttpClient) { }
 
   getEnginesFromDb() {
-    return this.http.get<Engine[]>(this.url);
+    return this.http.get<Product[]>(this.url);
   }
 
-  addEngineToDb(newEngine: Engine) {
+  addEngineToDb(newEngine: Product) {
     return this.http.post(this.url, newEngine);
   }
 
-  updateEnginesInDb(updatedEngines: Engine[]) {
+  updateEnginesInDb(updatedEngines: Product[]) {
     return this.http.put(this.url, updatedEngines)
   }
 

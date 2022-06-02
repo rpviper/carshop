@@ -1,1 +1,8 @@
-<button routerLink="/">Back</button>
+<app-navbar></app-navbar>
+<button class="slide" routerLink="/"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
+
+<div *ngFor="let cartProduct of cartProducts" >
+ <img src="{{cartProduct.product.imgSrc}} ">
+ <div>{{ cartProduct.product.name }} </div>
+ <div>{{ cartProduct.product.price | thousandSeparator }} </div>
+</div>

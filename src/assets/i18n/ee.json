@@ -12,8 +12,12 @@
  "welcome": "Tere tulemast meie kodulehele!",
  "choose-gategory": "Palun vajuta kirja pildil, või vali Produktide menüüst",
  "note": "Tähelepanu: ainult mootor, aku, käigukast ja pooltelg töötavad selle näite jaoks",
- "add": "Lisa {{engine.name}}",
- "to-cart": "ostukorvi"  
+ "add-to-cart": "Lisa Ostukorvi",
+ "back": "Tagasi",
+ "a-z": "Sorteeri A-Z",
+ "z-a": "Sorteeri Z-A",
+ "price-up": "Sorteeri Hind Kasvavalt",
+ "price-down": "Sorteeri Hind Kahanevalt"
  
 }
 

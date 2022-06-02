@@ -5,6 +5,7 @@ import { AxleComponent } from './axle/axle.component';
 import { BatteryComponent } from './battery/battery.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
+import { EngineShowComponent } from './engine-show/engine-show.component';
 import { EngineComponent } from './engine/engine.component';
 import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
   {path: "contact", component: ContactComponent},
   {path: "faq", component: FaqComponent},
-  {path: "cart", component: CartComponent}
+  {path: "cart", component: CartComponent},
+  {path: "engine-show/:productId", component: EngineShowComponent}
 ];
 
 @NgModule({

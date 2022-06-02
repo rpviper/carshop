@@ -12,8 +12,11 @@
  "welcome": "Welcome to our home page!",
  "choose-gategory": "Please choose category below, or from Our Products menu",
  "note": "Note: only engine, battery, transmission and axle work for this example",
- "add": "Add {{engine.name}}",
- "to-cart": "to cart"  
- 
+ "add-to-cart": "Add To Cart",
+ "back": "Back",
+ "a-z": "Sort A-Z",
+ "z-a": "Sort Z-A",
+ "price-up": "Sort Price Ascending",
+ "price-down": "Sort Price Descending"
 }
 

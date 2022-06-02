@@ -16,6 +16,9 @@ import { CartComponent } from './cart/cart.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
+import { EngineShowComponent } from './engine-show/engine-show.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,14 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     NavbarComponent,
     ContactComponent,
     FaqComponent,
-    CartComponent
+    CartComponent,
+    ThousandSeparatorPipe,
+    EngineShowComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     // ngx-translate and the loader module
     HttpClientModule,
