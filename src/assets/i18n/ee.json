@@ -17,7 +17,13 @@
  "a-z": "Sorteeri A-Z",
  "z-a": "Sorteeri Z-A",
  "price-up": "Sorteeri Hind Kasvavalt",
- "price-down": "Sorteeri Hind Kahanevalt"
+ "price-down": "Sorteeri Hind Kahanevalt",
+ "id": "Mootori ID:",
+ "name": "Mootori mudel:",
+ "price": "Hind (Eurodes)",
+ "description": "Mootori kirjeldus:",
+ "cart-empty": "Siin ei tundu midagi olevat",
+ "empty-cart": "Tühjenda ostukorv"
  
 }
 

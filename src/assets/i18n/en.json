@@ -17,6 +17,12 @@
  "a-z": "Sort A-Z",
  "z-a": "Sort Z-A",
  "price-up": "Sort Price Ascending",
- "price-down": "Sort Price Descending"
+ "price-down": "Sort Price Descending",
+ "id": "Engine ID:",
+ "name": "Engine model:",
+ "price": "Price (In Euros)",
+ "description": "Engine description:",
+ "cart-empty": "There seems to be nothing here",
+ "empty-cart": "Empty cart"
 }
 

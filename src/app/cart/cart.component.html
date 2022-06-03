@@ -1,8 +1,12 @@
-<app-navbar></app-navbar>
-<button class="slide" routerLink="/"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
-
-<div *ngFor="let cartProduct of cartProducts" >
- <img src="{{cartProduct.product.imgSrc}} ">
- <div>{{ cartProduct.product.name }} </div>
- <div>{{ cartProduct.product.price | thousandSeparator }} </div>
-</div>
+<div *ngIf="cartProducts.length === 0"><h3> {{"cart-empty" | translate}}</h3></div>
+<button class="slide" *ngIf="cartProducts.length >0" (click)="emptyCart()">{{"empty-cart" | translate}}</button><br><br>
+<div *ngFor="let cartProduct of cartProducts">
+ <ul>
+  <li>
+    <img src={{cartProduct.product.imgSrc}} />
+    <h2>{{ cartProduct.product.name }}</h2>
+    <h2>{{ cartProduct.product.price | thousandSeparator }}</h2>
+  </li>
+  </ul>
+  </div>
+  

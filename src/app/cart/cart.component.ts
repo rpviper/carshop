@@ -19,4 +19,9 @@ export class CartComponent implements OnInit {
     }
   }
 
+  emptyCart() {
+    this.cartProducts = [];
+    sessionStorage.setItem("cartItems", JSON.stringify(this.cartProducts));
+  }
+
 }

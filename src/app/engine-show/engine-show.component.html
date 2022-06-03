@@ -1,11 +1,26 @@
-<form *ngIf="product" [formGroup] = "form"> 
- <label>Product ID: </label>
- <input formControlName="name" type="text">
- <label>Name: </label>
- <input formControlName="name" type="text">
- <label>Price: </label>
- <input formControlName="price" type="number">
- <label>Description: </label>
- <input formControlName="description" type="text">
- <button>Muuda</button>
-</form>
+
+<form [formGroup] = "changingForm"> 
+ <img src="{{product.imgSrc}}">
+ <br><br>
+ <label>{{"id" | translate}} </label><br>
+ <input formControlName="id" type="number" readonly><br><br>
+ <label>{{"name" | translate}} </label><br>
+ <input formControlName="name" type="text" readonly><br><br>
+ <label>{{"price" | translate}} </label><br>
+ <input  formControlName="price" type="number" readonly ><br><br>
+ <label>{{"description" | translate}} </label><br>
+ <textarea formControlName="description" type="text" readonly cols="20" rows="10"><br><br></textarea>
+ </form>
+
+ <button class="slide" routerLink="/engine"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
+ <button class="slide" style="
+  position: absolute;
+  top: 300px;
+  left: 30%;"
+   (click)="addToCart(product)"   
+   ><i class="icon-arrow-right"></i>{{"add-to-cart" | translate}} </button>
+   <button class="slide" style="
+   position: absolute;
+   top: 400px;
+   left: 30%;"
+   routerLink="/cart"><i class="icon-arrow-right"></i>{{"cart" | translate}} </button>
