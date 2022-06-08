@@ -2,17 +2,17 @@
 <form [formGroup] = "changingForm"> 
  <img src="{{product.imgSrc}}">
  <br><br>
- <label>{{"eng-id" | translate}} </label><br>
+ <label>{{"bat-id" | translate}} </label><br>
  <input formControlName="id" type="number" readonly><br><br>
- <label>{{"eng-name" | translate}} </label><br>
+ <label>{{"bat-name" | translate}} </label><br>
  <input formControlName="name" type="text" readonly><br><br>
  <label>{{"price" | translate}} </label><br>
  <input  formControlName="price" type="number" readonly ><br><br>
- <label>{{"eng-description" | translate}} </label><br>
+ <label>{{"bat-description" | translate}} </label><br>
  <textarea formControlName="description" type="text" readonly cols="20" rows="10"><br><br></textarea>
  </form>
 
- <button class="slide" routerLink="/engine"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
+ <button class="slide" routerLink="/battery"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
  <button class="slide" style="
   position: absolute;
   top: 300px;

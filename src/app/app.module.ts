@@ -19,6 +19,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ThousandSeparatorPipe } from './pipes/thousand-separator.pipe';
 import { EngineShowComponent } from './engine-show/engine-show.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BatteryShowComponent } from './battery-show/battery-show.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FaqComponent,
     CartComponent,
     ThousandSeparatorPipe,
-    EngineShowComponent
+    EngineShowComponent,
+    BatteryShowComponent
   ],
   imports: [
     BrowserModule,

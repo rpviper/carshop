@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AxleComponent } from './axle/axle.component';
+import { BatteryShowComponent } from './battery-show/battery-show.component';
 import { BatteryComponent } from './battery/battery.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: "contact", component: ContactComponent},
   {path: "faq", component: FaqComponent},
   {path: "cart", component: CartComponent},
-  {path: "engine-show/:productId", component: EngineShowComponent}
+  {path: "engine-show/:productId", component: EngineShowComponent},
+  {path: "battery-show/:productId", component: BatteryShowComponent}
 ];
 
 @NgModule({

@@ -1,26 +1,24 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartProduct } from '../models/cart.model';
 import { Product } from '../models/product.model';
-import { EngineService } from '../services/engine.service';
+import { BatteryService } from '../services/battery.service';
 
 @Component({
-  selector: 'app-engine-show',
-  templateUrl: './engine-show.component.html',
-  styleUrls: ['./engine-show.component.css']
+  selector: 'app-battery-show',
+  templateUrl: './battery-show.component.html',
+  styleUrls: ['./battery-show.component.css']
 })
-export class EngineShowComponent implements OnInit {
-  engineItems: Product[] = []
+export class BatteryShowComponent implements OnInit {
+
+  batteryItems: Product[] = []
   products: Product[] = [];
   product!: Product
   changingForm!: FormGroup
   
 
-  constructor(private engineService: EngineService,
-    private http: HttpClient,
-    private router: Router,
+  constructor(private batteryService: BatteryService,
     private route: ActivatedRoute,
            ) { }
 
@@ -28,12 +26,12 @@ export class EngineShowComponent implements OnInit {
     localStorage.getItem("language");
     const productId = this.route.snapshot.paramMap.get("productId");
     if (productId) {
-      this.getEnginesFromDb(productId);
+      this.getBatteriesFromDb(productId);
     } 
   }
 
-  private getEnginesFromDb(productId: string) {
-    this.engineService.getEnginesFromDb().subscribe(response => {
+  private getBatteriesFromDb(productId: string) {
+    this.batteryService.getBatteriesFromDb().subscribe(response => {
       for (const key in response) {
         this.products.push(response[key]);
       }
@@ -72,9 +70,5 @@ export class EngineShowComponent implements OnInit {
     
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
         
-    // this.engineService.cartChanged.next(true);
-  }
+    }
 }
-  
-
-

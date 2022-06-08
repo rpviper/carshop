@@ -2,3 +2,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
 
 <button class="slide" routerLink="/"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
+
+<button class="slide" routerLink="/"><i class="icon-arrow-left"></i>{{"back" | translate}} </button>
+<button class="slide" (click)="onSortAZ()"><i class="icon-arrow-down"></i>{{"a-z" | translate}}</button>
+<button class="slide" (click)="onSortZA()"><i class="icon-arrow-up"></i>{{"z-a" | translate}}</button>
+<button class="slide" (click)="onSortPriceAsc()"><i class="icon-arrow-up"></i>{{"price-up" | translate}}</button>
+<button class="slide" (click)="onSortPriceDesc()"><i class="icon-arrow-down"></i>{{"price-down" | translate}}</button>
+
+<div class="table-wrapper">
+<table class="fl-table">
+ <tr *ngFor="let product of products">
+  <th>
+  <img routerLink="/battery-show/{{product.id}} " class="open" src="{{product.imgSrc}}"></th>
+  <td><h3>{{ product.name }}</h3></td>
+  <td><h3>{{ product.price | thousandSeparator }}</h3></td>
+  <td><button class="slide" (click)="addToCart(product)"   
+   ><i class="icon-arrow-right"></i>{{"add-to-cart" | translate}} </button></td>
+  </tr>
+</table>
+</div> 
+
+
